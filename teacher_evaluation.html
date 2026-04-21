@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Thugra Academy – Teachers Evaluation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+ <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+        <span class="logo-text">Thugra Academy</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Course Content</a></li>
+        <li><a href="dashboard.html" class="active">Student Dashboard</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <button id="themeBtn">🌙</button>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Home</a><span>&gt;</span>
+      <a href="dashboard.html">Student Dashboard</a><span>&gt;</span>
+      Teachers Evaluation
+    </div>
+  </div>
+
+  <main>
+    <div class="dashboard-header">
+      <div class="dashboard-title">
+        <h2>Student Dashboard</h2>
+      </div>
+    </div>
+
+    <!-- Sub Navigation -->
+    <div class="sub-nav">
+      <a href="my_notes.html">&#9744; My Notes</a>
+      <a href="teacher_evaluation.html" class="active">&#9733; Teachers Evaluation</a>
+    </div>
+
+    <!-- Evaluation Form -->
+    <div class="eval-box">
+      <div class="eval-box-header">
+        <span style="font-size:1.4rem;">&#128100;</span>
+        <h3>Teachers Evaluation</h3>
+      </div>
+
+      <div class="eval-box-body">
+        <form action="#" method="post">
+
+          <div class="form-group">
+            <label for="teacherSelect">Select Teacher</label>
+            <select id="teacherSelect" name="teacherSelect" class="form-control" required>
+              <option value="">-- Select a teacher --</option>
+              <option value="sarah">Dr. Sarah Al-Rashid</option>
+              <option value="khalid">Prof. Khalid Al-Otaibi</option>
+              <option value="reem">Dr. Reem Al-Harbi</option>
+              <option value="nada">Eng. Nada Al-Qahtani</option>
+              <option value="faisal">Dr. Faisal Al-Dossari</option>
+              <option value="hanan">Prof. Hanan Al-Shehri</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Rating</label>
+            <div class="star-rating">
+              <input type="radio" id="star5" name="rating" value="5"/>
+              <label for="star5" title="5 stars">&#9733;</label>
+              <input type="radio" id="star4" name="rating" value="4"/>
+              <label for="star4" title="4 stars">&#9733;</label>
+              <input type="radio" id="star3" name="rating" value="3"/>
+              <label for="star3" title="3 stars">&#9733;</label>
+              <input type="radio" id="star2" name="rating" value="2"/>
+              <label for="star2" title="2 stars">&#9733;</label>
+              <input type="radio" id="star1" name="rating" value="1"/>
+              <label for="star1" title="1 star">&#9733;</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="feedback">Feedback</label>
+            <textarea id="feedback" name="feedback" class="form-control" placeholder="Write your feedback about this teacher..." style="min-height:150px;"></textarea>
+          </div>
+
+          <div style="text-align:center; margin-top:8px;">
+            <button type="submit" class="btn btn-blue" style="padding:12px 36px;">Submit Evaluation &#10148;</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+    <!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+        <span class="logo-text">Thugra Academy</span>
+      </a>
+        <p>Empowering the next generation of cybersecurity professionals.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>+1 (555) 123-4567</p>
+        <p>info@ThugraAcademy.edu</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+          <a href="#">X</a>
+          <a href="#">in</a>
+          <a href="#">f</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">2026 &copy; Thugra Academy. All rights reserved.</div>
+  </footer>
+<button id="topBtn">↑</button>
+<div id="clock"></div>
+<script src="script.js"></script>
+</body>
+</html>

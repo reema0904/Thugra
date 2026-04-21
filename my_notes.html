@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Thugra Academy – My Notes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+ <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+        <span class="logo-text">Thugra Academy</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Course Content</a></li>
+        <li><a href="dashboard.html" class="active">Student Dashboard</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <button id="themeBtn">🌙</button>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Home</a><span>&gt;</span>
+      <a href="dashboard.html">Student Dashboard</a>
+      <span>&gt;</span>My Notes</div>
+  </div>
+
+  <main>
+    <div class="dashboard-header">
+      <div class="dashboard-title">
+        <h2>Student Dashboard</h2>
+      </div>
+    </div>
+
+    <!-- Sub Navigation -->
+    <div class="sub-nav">
+      <a href="my_notes.html" class="active">&#9744; My Notes</a>
+      <a href="teacher_evaluation.html">&#9733; Teachers Evaluation</a>
+    </div>
+
+    <!-- SECTION 1: Add New Note -->
+    <div class="notes-section">
+      <h3>&#43; Add New Note</h3>
+      <form action="#" method="post" class="add-note-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="noteText">Note Text</label>
+            <input type="text" id="noteText" name="noteText" class="form-control" placeholder="Enter your note..." required />
+          </div>
+          <div class="form-group" style="flex: 0 1 180px;">
+            <label for="notePriority">Priority</label>
+            <select id="notePriority" name="notePriority" class="form-control">
+              <option value="">Select priority</option>
+              <option value="1">1 - High Priority</option>
+              <option value="2">2 - Medium Priority</option>
+              <option value="3">3 - Low Priority</option>
+            </select>
+          </div>
+        </div>
+        <div style="display:flex; gap:10px; margin-top:12px;">
+          <button type="submit" name="action" value="add" class="btn btn-blue">Add</button>
+          <button type="button" class="btn btn-success">Save</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- SECTION 2: Saved Notes (Delete Form) -->
+    <div class="notes-section">
+      <h3>&#128221; Saved Notes</h3>
+      <form action="#" method="post">
+
+        <div class="note-item">
+          <input type="checkbox" name="deleteNote" value="1" id="note1"/>
+          <img src="images/note_icon.png" alt="Note" class="note-thumb" />
+          <div class="note-info">
+            <div class="note-text">Review the OSI model layers and their security implications</div>
+            <div class="note-date">March 5, 2026</div>
+            <div class="note-priority">Priority: 1 (High)</div>
+          </div>
+        </div>
+
+        <div class="note-item">
+          <input type="checkbox" name="deleteNote" value="2" id="note2"/>
+          <img src="images/note_icon.png" alt="Note" class="note-thumb" />
+          <div class="note-info">
+            <div class="note-text">Study the differences between symmetric and asymmetric encryption</div>
+            <div class="note-date">March 4, 2026</div>
+            <div class="note-priority">Priority: 2 (Medium)</div>
+          </div>
+        </div>
+
+        <div class="note-item">
+          <input type="checkbox" name="deleteNote" value="3" id="note3"/>
+          <img src="images/note_icon.png" alt="Note" class="note-thumb" />
+          <div class="note-info">
+            <div class="note-text">Memorize the OWASP Top 10 vulnerabilities for the next quiz</div>
+            <div class="note-date">March 2, 2026</div>
+            <div class="note-priority">Priority: 1 (High)</div>
+          </div>
+        </div>
+
+        <div class="note-item">
+          <input type="checkbox" name="deleteNote" value="4" id="note4"/>
+          <img src="images/note_icon.png" alt="Note" class="note-thumb" />
+          <div class="note-info">
+            <div class="note-text">Read more about incident response frameworks (NIST, SANS)</div>
+            <div class="note-date">February 28, 2026</div>
+            <div class="note-priority">Priority: 3 (Low)</div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;">
+          <button type="submit" name="action" value="delete" class="btn btn-danger">Delete Selected</button>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+ 
+<!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+        <span class="logo-text">Thugra Academy</span>
+      </a>
+        <p>Empowering the next generation of cybersecurity professionals.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>+1 (555) 123-4567</p>
+        <p>info@ThugraAcademy.edu</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+          <a href="#">X</a>
+          <a href="#">in</a>
+          <a href="#">f</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">2026 &copy; Thugra Academy. All rights reserved.</div>
+  </footer>
+<button id="topBtn">↑</button>
+<div id="clock"></div>
+<script src="script.js"></script>
+</body>
+</html>

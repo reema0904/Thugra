@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Thugra Academy – Lesson 1: Network Security (Page 2)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+ <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+        <span class="logo-text">Thugra Academy</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html" class="active">Course Content</a></li>
+        <li><a href="dashboard.html">Student Dashboard</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <button id="themeBtn">🌙</button>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Home</a><span>&gt;</span>
+      <a href="courses.html">Course Content</a><span>&gt;</span>
+      <a href="lesson1_page1.html">Lesson 1</a><span>&gt;</span>
+      Page 2 of 2
+    </div>
+  </div>
+
+  <main>
+    <div class="lesson-wrapper">
+      <a href="courses.html" class="back-to-courses">← Back to Courses</a>
+
+      <div class="lesson-box">
+        <div class="lesson-box-header">
+          <h2>Lesson 1: Introduction to Network Security</h2>
+          <span class="lesson-page-num">Page 2 of 2</span>
+        </div>
+
+        <div class="lesson-box-body">
+
+          <div class="lesson-text-section">
+            <h3>Key Security Protocols</h3>
+            <p>Security protocols are formal rules that govern how data is protected during communication. Understanding these protocols is essential for any cybersecurity professional.</p>
+          </div>
+
+          <!-- TABLE (page 2) -->
+          <table class="lesson-table">
+            <thead>
+              <tr>
+                <th>Protocol</th>
+                <th>Layer</th>
+                <th>Purpose</th>
+                <th>Port</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>HTTPS</td>
+                <td>Application</td>
+                <td>Secure web browsing</td>
+                <td>443</td>
+              </tr>
+              <tr>
+                <td>SSH</td>
+                <td>Application</td>
+                <td>Secure remote access</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td>TLS/SSL</td>
+                <td>Transport</td>
+                <td>Encryption of data in transit</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>IPsec</td>
+                <td>Network</td>
+                <td>Securing IP communications</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>WPA3</td>
+                <td>Data Link</td>
+                <td>Secure Wi-Fi encryption</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- NESTED LIST (page 2) -->
+          <div class="lesson-text-section mt-16">
+            <h3>Best Practices for Network Security</h3>
+            <ul class="nested-list">
+              <li>Access Control
+                <ul>
+                  <li>Implement the principle of least privilege</li>
+                  <li>Use multi-factor authentication (MFA)</li>
+                  <li>Regularly audit user permissions</li>
+                </ul>
+              </li>
+              <li>Monitoring & Detection
+                <ul>
+                  <li>Deploy SIEM (Security Information and Event Management) systems</li>
+                  <li>Configure real-time alerts for suspicious activity</li>
+                  <li>Conduct regular vulnerability scans</li>
+                </ul>
+              </li>
+              <li>Incident Response Planning
+                <ul>
+                  <li>Define roles and responsibilities</li>
+                  <li>Establish communication protocols</li>
+                  <li>Test the plan with regular drills</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quiz CTA -->
+          <div class="quiz-cta">
+            <h3>Ready to Test Your Knowledge?</h3>
+            <p>Take the quiz to earn your badge for this lesson.</p>
+            <a href="lesson1_quiz.html" class="btn btn-primary">Start Quiz →</a>
+          </div>
+
+        </div>
+
+        <div class="lesson-nav">
+          <a href="lesson1_page1.html" class="btn btn-outline" style="color:var(--primary);border-color:var(--primary);">← Back</a>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+        <span class="logo-text">Thugra Academy</span>
+      </a>
+        <p>Empowering the next generation of cybersecurity professionals.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>+1 (555) 123-4567</p>
+        <p>info@ThugraAcademy.edu</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+          <a href="#">X</a>
+          <a href="#">in</a>
+          <a href="#">f</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">2026 &copy; Thugra Academy. All rights reserved.</div>
+  </footer>
+<button id="topBtn">↑</button>
+<div id="clock"></div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Thugra Academy – About Us</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+        <span class="logo-text">Thugra Academy</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Course Content</a></li>
+        <li><a href="dashboard.html">Student Dashboard</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <button id="themeBtn">🌙</button>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Home</a><span>&gt;</span> About Us
+    </div>
+  </div>
+
+  <main>
+    <div class="section-header">
+      <h2>Meet Our Experts</h2>
+      <p>Learn from experts with decades of real-world cybersecurity experience.</p>
+    </div>
+
+    <!-- Sort Bar -->
+    <div class="sort-bar">
+      <label for="sortTeachers">Sort by:</label>
+      <select id="sortTeachers" class="sort-select">
+        <optgroup label="Name">
+          <option value="name-asc">Name: A to Z</option>
+          <option value="name-desc">Name: Z to A</option>
+        </optgroup>
+        <optgroup label="Years of Experience">
+          <option value="exp-asc">Years of Experience: Low to High</option>
+          <option value="exp-desc">Years of Experience: High to Low</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <!-- Teachers Horizontal Scroll -->
+    <div class="teachers-scroll-container">
+      <div class="teachers-flex" id="teachersList">
+
+        <div class="teacher-card" data-name="Dr. Sarah Al-Rashid" data-exp="15">
+          <img src="images/Dr. Sarah.png" alt="" class="course-card-img" />
+          <div class="teacher-card-body">
+            <h3>Dr. Sarah Al-Rashid</h3>
+            <div class="teacher-exp">15 Years of Experience</div>
+            <p class="teacher-bio">Expert in network security and intrusion detection systems. Former security
+              consultant at major tech firms. Holds CISSP and CEH certifications.</p>
+          </div>
+        </div>
+
+        <div class="teacher-card" data-name="Prof. Khalid Al-Otaibi" data-exp="20">
+          <img src="images/Prof. Khalid.png" alt="" class="course-card-img" />
+          <div class="teacher-card-body">
+            <h3>Prof. Khalid Al-Otaibi</h3>
+            <div class="teacher-exp">20 Years of Experience</div>
+            <p class="teacher-bio">Renowned malware researcher and author of several cybersecurity publications.
+              Previously worked with national cybersecurity agencies.</p>
+          </div>
+        </div>
+
+        <div class="teacher-card" data-name="Dr. Reem Al-Harbi" data-exp="12">
+          <img src="images/Dr. Reem.png" alt="" class="course-card-img" />
+          <div class="teacher-card-body">
+            <h3>Dr. Reem Al-Harbi</h3>
+            <div class="teacher-exp">12 Years of Experience</div>
+            <p class="teacher-bio">Cryptography researcher with a PhD in Information Security. Specializes in
+              post-quantum cryptography and blockchain security.</p>
+          </div>
+        </div>
+
+        <div class="teacher-card" data-name="Eng. Nada Al-Qahtani" data-exp="8">
+          <img src="images/Eng. Nada.png" alt="" class="course-card-img" />
+          <div class="teacher-card-body">
+            <h3>Eng. Nada Al-Qahtani</h3>
+            <div class="teacher-exp">8 Years of Experience</div>
+            <p class="teacher-bio">Web application security specialist with extensive experience in OWASP frameworks and
+              secure software development lifecycle (SDLC).</p>
+          </div>
+        </div>
+
+        <div class="teacher-card" data-name="Dr. Faisal Al-Dossari" data-exp="18">
+          <img src="images/Dr. Faisal.png" alt="" class="course-card-img" />
+          <div class="teacher-card-body">
+            <h3>Dr. Faisal Al-Dossari</h3>
+            <div class="teacher-exp">18 Years of Experience</div>
+            <p class="teacher-bio">Certified ethical hacker and penetration testing expert. Has conducted security
+              assessments for government and enterprise clients worldwide.</p>
+          </div>
+        </div>
+
+        <div class="teacher-card" data-name="Prof. Hanan Al-Shehri" data-exp="22">
+          <img src="images/Prof. Hanan.png" alt="" class="course-card-img" />
+          <div class="teacher-card-body">
+            <h3>Prof. Hanan Al-Shehri</h3>
+            <div class="teacher-exp">22 Years of Experience</div>
+            <p class="teacher-bio">Digital forensics pioneer and incident response expert. Has led investigations on
+              high-profile cybercrime cases and serves on multiple international advisory boards.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+        <span class="logo-text">Thugra Academy</span>
+      </a>
+        <p>Empowering the next generation of cybersecurity professionals.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>+1 (555) 123-4567</p>
+        <p>info@ThugraAcademy.edu</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+          <a href="#">X</a>
+          <a href="#">in</a>
+          <a href="#">f</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">2026 &copy; Thugra Academy. All rights reserved.</div>
+  </footer>
+<button id="topBtn">↑</button>
+<div id="clock"></div>
+<script src="script.js"></script>
+</body>
+</html>

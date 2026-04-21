@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Thugra Academy Lesson 1: Network Security (Page 1)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+ <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+        <span class="logo-text">Thugra Academy</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html" class="active">Course Content</a></li>
+        <li><a href="dashboard.html">Student Dashboard</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <button id="themeBtn">🌙</button>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Home</a><span>&gt;</span>
+      <a href="courses.html">Course Content</a><span>&gt;</span>
+      Lesson 1
+    </div>
+  </div>
+
+  <main>
+    <div class="lesson-wrapper">
+      <a href="courses.html" class="back-to-courses">← Back to Courses</a>
+
+      <div class="lesson-box">
+        <div class="lesson-box-header">
+          <h2>Lesson 1: Introduction to Network Security</h2>
+          <span class="lesson-page-num">Page 1 of 2</span>
+        </div>
+
+        <div class="lesson-box-body">
+
+          <!-- Text Section -->
+          <div class="lesson-text-section">
+            <h3>What is Network Security?</h3>
+            <p>Network security consists of policies, processes, and practices adopted to prevent, detect, and monitor unauthorized access, misuse, modification, or denial of a computer network and network-accessible resources. Network security involves the authorization of access to data in a network, which is controlled by the network administrator.</p>
+          </div>
+
+          <!-- TABLE (required) -->
+          <h3>Types of Network Threats</h3>
+          <table class="lesson-table">
+            <thead>
+              <tr>
+                <th>Threat Type</th>
+                <th>Description</th>
+                <th>Severity Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Denial of Service (DoS)</td>
+                <td>Overwhelms a system to make it unavailable to users</td>
+                <td>High</td>
+              </tr>
+              <tr>
+                <td>Man-in-the-Middle</td>
+                <td>Attacker secretly intercepts communication between two parties</td>
+                <td>Critical</td>
+              </tr>
+              <tr>
+                <td>Phishing</td>
+                <td>Fraudulent attempt to steal sensitive information by impersonation</td>
+                <td>Medium</td>
+              </tr>
+              <tr>
+                <td>SQL Injection</td>
+                <td>Inserting malicious SQL code into queries to manipulate databases</td>
+                <td>Critical</td>
+              </tr>
+              <tr>
+                <td>Packet Sniffing</td>
+                <td>Capturing and analyzing data packets transmitted over a network</td>
+                <td>Medium</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- NESTED LIST (required) -->
+          <div class="lesson-text-section mt-16">
+            <h3>Network Security Layers</h3>
+            <p>A comprehensive network security strategy is built across multiple layers:</p>
+            <ul class="nested-list">
+              <li>Physical Security
+                <ul>
+                  <li>Access control to data centers</li>
+                  <li>Surveillance cameras</li>
+                  <li>Hardware locks and biometrics</li>
+                </ul>
+              </li>
+              <li>Network Perimeter Security
+                <ul>
+                  <li>Firewalls (hardware and software)</li>
+                  <li>Intrusion Detection Systems (IDS)</li>
+                  <li>Demilitarized Zones (DMZ)</li>
+                </ul>
+              </li>
+              <li>Endpoint Security
+                <ul>
+                  <li>Antivirus and anti-malware software</li>
+                  <li>Patch management</li>
+                  <li>Device encryption</li>
+                </ul>
+              </li>
+              <li>Data Security
+                <ul>
+                  <li>Encryption of data at rest</li>
+                  <li>Encryption of data in transit (TLS/SSL)</li>
+                  <li>Data loss prevention (DLP)</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="lesson-nav">
+          <span></span>
+          <a href="lesson1_page2.html" class="btn btn-blue">Next →</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+        <span class="logo-text">Thugra Academy</span>
+      </a>
+        <p>Empowering the next generation of cybersecurity professionals.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>+1 (555) 123-4567</p>
+        <p>info@ThugraAcademy.edu</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+          <a href="#">X</a>
+          <a href="#">in</a>
+          <a href="#">f</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">2026 &copy; Thugra Academy. All rights reserved.</div>
+  </footer>
+<button id="topBtn">↑</button>
+<div id="clock"></div>
+<script src="script.js"></script>
+</body>
+</html>

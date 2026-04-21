@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <title>Thugra Academy – Quiz: Lesson 2</title>
+  <link rel="stylesheet" href="style.css"/></head>
+<body>
+
+ <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+        <span class="logo-text">Thugra Academy</span>
+      </a>
+      <ul class="nav-links"><li><a href="index.html">Home</a></li><li>
+        <a href="courses.html" class="active">Course Content</a></li>
+        <li><a href="dashboard.html">Student Dashboard</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <button id="themeBtn">🌙</button>
+    </nav>
+    </header>
+
+  <div class="breadcrumb"><div class="breadcrumb-inner">
+    <a href="index.html">Home</a><span>&gt;</span>
+    <a href="courses.html">Course Content</a>
+    <span>&gt;</span>
+    <a href="lesson2_page1.html">Lesson 2</a>
+    <span>&gt;</span>Quiz</div></div>
+
+  <main>
+    <div class="quiz-wrapper">
+      <a href="lesson2_page2.html" class="back-to-courses">← Back to Lesson</a>
+      <div class="quiz-box">
+        <div class="quiz-box-header"><h2>Quiz: Lesson 2 – Malware Analysis & Defense</h2></div>
+        <form class="quiz-box-body" action="result.html" method="get">
+          <div class="quiz-question"><p>1. Which type of malware encrypts files and demands payment for decryption?</p>
+            <label class="quiz-option"><input type="radio" name="q1" value="a"/>Virus</label>
+            <label class="quiz-option"><input type="radio" name="q1" value="b"/>Ransomware</label>
+            <label class="quiz-option"><input type="radio" name="q1" value="c"/>Spyware</label>
+            <label class="quiz-option"><input type="radio" name="q1" value="d"/>Worm</label>
+          </div>
+          <div class="quiz-question"><p>2. What is the main purpose of sandboxing in malware analysis?</p>
+            <label class="quiz-option"><input type="radio" name="q2" value="a"/>To permanently delete malware</label>
+            <label class="quiz-option"><input type="radio" name="q2" value="b"/>To isolate and safely execute suspicious code</label>
+            <label class="quiz-option"><input type="radio" name="q2" value="c"/>To share malware samples online</label>
+            <label class="quiz-option"><input type="radio" name="q2" value="d"/>To block all network traffic</label>
+          </div>
+          <div class="quiz-question"><p>3. Which malware analysis technique examines the malware without executing it?</p>
+            <label class="quiz-option"><input type="radio" name="q3" value="a"/>Dynamic Analysis</label>
+            <label class="quiz-option"><input type="radio" name="q3" value="b"/>Behavioral Analysis</label>
+            <label class="quiz-option"><input type="radio" name="q3" value="c"/>Static Analysis</label>
+            <label class="quiz-option"><input type="radio" name="q3" value="d"/>Network Analysis</label>
+          </div>
+          <div class="quiz-question"><p>4. A Trojan horse is dangerous mainly because it:</p>
+            <label class="quiz-option"><input type="radio" name="q4" value="a"/>Spreads automatically across networks</label>
+            <label class="quiz-option"><input type="radio" name="q4" value="b"/>Appears as legitimate software to deceive users</label>
+            <label class="quiz-option"><input type="radio" name="q4" value="c"/>Encrypts all data on a system</label>
+            <label class="quiz-option"><input type="radio" name="q4" value="d"/>Only targets mobile devices</label>
+          </div>
+          <div class="quiz-footer">
+            <a href="lesson2_page2.html" class="btn btn-outline" style="color:var(--primary);border-color:var(--primary);">← Back</a>
+            <button type="submit" class="btn btn-blue">Submit Quiz</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+        <span class="logo-text">Thugra Academy</span>
+      </a>
+        <p>Empowering the next generation of cybersecurity professionals.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>+1 (555) 123-4567</p>
+        <p>info@ThugraAcademy.edu</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+          <a href="#">X</a>
+          <a href="#">in</a>
+          <a href="#">f</a>
+        </div>
+      </div>
+    </div>
+  <div class="footer-bottom">2026 &copy; Thugra Academy. All rights reserved.</div>
+</footer>
+<button id="topBtn">↑</button>
+<div id="clock"></div>
+<script src="script.js"></script>
+</body>
+</html>

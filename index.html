@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Thugra Academy Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+        <span class="logo-text">Thugra Academy</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="courses.html">Course Content</a></li>
+        <li><a href="dashboard.html">Student Dashboard</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        
+      </ul>
+      <button id="themeBtn">🌙</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Master Cybersecurity<br>with Thugra Academy</h1>
+      <p>Our vision is to empower every student with the knowledge and practical skills needed to thrive in the ever-evolving world of cybersecurity.</p>
+      <div class="hero-btns">
+        <a href="courses.html" class="btn btn-primary">Explore Courses</a>
+        <a href="about.html" class="btn btn-outline">Meet Our Experts</a>
+      </div> 
+  </section>
+
+  <main>
+
+    <!-- LESSONS SECTION -->
+    <section>
+      <div class="section-header">
+        <h2>Key Areas Of Focus</h2>
+        <p>Explore our top cybersecurity lessons designed by industry experts.</p>
+      </div>
+
+      <div class="lessons-flex">
+
+        <!-- Lesson Card 1 -->  
+        <div class="lesson-card">
+       <img src="images/lesson1.jpeg" alt="" class="course-card-img" />        
+         <div class="lesson-card-body">
+            <span class="lesson-category-tag">Network Security</span>
+            <div class="lesson-title">Introduction to Network Security </div>
+            <div class="lesson-teacher">👤 Dr. Sarah Al-Rashid</div>
+          </div>
+          <div class="lesson-hover-info">
+            <h3>Learn the fundamentals of protecting computer networks 
+              from unauthorized access, misuse, and various cyber attacks.</h3>
+            <p>Go to Learn</p>
+            <p>👤 Dr.Name </p>
+            <a href="lesson1_page1.html" class="btn btn-primary btn-sm">Start Lesson</a>
+          </div>
+        </div>
+
+        <!-- Lesson Card 2 --> 
+        <div class="lesson-card">
+       <img src="images/lesson2.jpeg" alt="" class="course-card-img" />        
+          <div class="lesson-card-body">
+            <span class="lesson-category-tag">Malware</span>
+            <div class="lesson-title">Malware Analysis & Defense </div>
+            <div class="lesson-teacher">👤 Prof. Khalid Al-Otaibi</div>
+          </div>
+          <div class="lesson-hover-info">
+            <h3>Understand how malicious software works and learn
+               techniques to detect, analyze, and defend against various types of malware</h3>
+            <p>Go to Learn</p>
+            <p>👤 Prof.Name</p>
+            <a href="lesson2_page1.html" class="btn btn-primary btn-sm">Start Lesson</a>
+          </div>
+        </div>
+
+        <!-- Lesson Card 3 --> 
+        <div class="lesson-card">
+       <img src="images/lesson3.jpeg" alt="" class="course-card-img" />        
+          <div class="lesson-card-body">
+            <span class="lesson-category-tag">Cryptography</span>
+            <div class="lesson-title">Cryptography Fundamentals</div>
+            <div class="lesson-teacher">👤 Dr. Reem Al-Harbi</div>
+          </div>
+          <div class="lesson-hover-info">
+            <h3>Explore encryption algorithms, digital signatures, and how cryptography 
+              is used to protect data in transit and at rest.</h3>
+            <p> Go to Learn</p>
+            <p>👤 Dr.Name</p>
+            <a href="lesson3_page1.html" class="btn btn-primary btn-sm">Start Lesson</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STUDENT REVIEWS --> 
+    <section class="reviews-section">
+      <div class="section-header">
+        <h2>Student Success Stories</h2>
+        <p>Hear what our students say about their learning experience at Thugra Academy.</p>
+      </div>
+
+      <div class="reviews-flex">
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">S</div>
+            <div>
+              <div class="review-name">Sara Ahmed</div>
+              <div class="review-role">Network Security Student</div>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="review-text">Dr. Sarah's Network Security course is outstanding! The structured lessons and quizzes helped me fully grasp complex concepts.</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="background-color:#F5A623; color:#1a1a2e;">M</div>
+            <div>
+              <div class="review-name">Mohammed Al-Salem</div>
+              <div class="review-role">Malware Analysis Student</div>
+            </div>
+          </div>
+          <div class="stars">★★★★</div>
+          <p class="review-text">Prof. Khalid explains malware techniques in a very clear way. The hands-on examples made all the difference!</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" style="background-color:#28a745;">R</div>
+            <div>
+              <div class="review-name">Rasha Al-Ghamdi</div>
+              <div class="review-role">Cryptography Student</div>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="review-text">The cryptography course gave me a solid foundation. Dr. Reem is an amazing instructor — patient and very knowledgeable!</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+        <span class="logo-text">Thugra Academy</span>
+      </a>
+        <p>Empowering the next generation of cybersecurity professionals.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>+1 (555) 123-4567</p>
+        <p>info@ThugraAcademy.edu</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+          <a href="#">X</a>
+          <a href="#">in</a>
+          <a href="#">f</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      2026 &copy; Thugra Academy. All rights reserved.
+    </div>
+  </footer>
+<button id="topBtn">↑</button>
+
+<div id="clock"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
