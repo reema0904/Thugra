@@ -6,9 +6,10 @@
   <title>Thugra Academy – Teachers Evaluation</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  
- <!-- HEADER -->
+
+  <!-- HEADER -->
   <header>
     <nav class="navbar">
       <a href="index.html" class="logo">
@@ -59,7 +60,7 @@
 
           <div class="form-group">
             <label for="teacherSelect">Select Teacher</label>
-            <select id="teacherSelect" name="teacherSelect" class="form-control" required>
+            <select id="teacherSelect" name="teacherSelect" class="form-control">
               <option value="">-- Select a teacher --</option>
               <option value="sarah">Dr. Sarah Al-Rashid</option>
               <option value="khalid">Prof. Khalid Al-Otaibi</option>
@@ -73,22 +74,23 @@
           <div class="form-group">
             <label>Rating</label>
             <div class="star-rating">
-              <input type="radio" id="star5" name="rating" value="5"/>
+              <input type="radio" id="star5" name="rating" value="5" />
               <label for="star5" title="5 stars">&#9733;</label>
-              <input type="radio" id="star4" name="rating" value="4"/>
+              <input type="radio" id="star4" name="rating" value="4" />
               <label for="star4" title="4 stars">&#9733;</label>
-              <input type="radio" id="star3" name="rating" value="3"/>
+              <input type="radio" id="star3" name="rating" value="3" />
               <label for="star3" title="3 stars">&#9733;</label>
-              <input type="radio" id="star2" name="rating" value="2"/>
+              <input type="radio" id="star2" name="rating" value="2" />
               <label for="star2" title="2 stars">&#9733;</label>
-              <input type="radio" id="star1" name="rating" value="1"/>
+              <input type="radio" id="star1" name="rating" value="1" />
               <label for="star1" title="1 star">&#9733;</label>
             </div>
           </div>
 
           <div class="form-group">
             <label for="feedback">Feedback</label>
-            <textarea id="feedback" name="feedback" class="form-control" placeholder="Write your feedback about this teacher..." style="min-height:150px;"></textarea>
+            <textarea id="feedback" name="feedback" class="form-control"
+              placeholder="Write your feedback about this teacher..." style="min-height:150px;"></textarea>
           </div>
 
           <div style="text-align:center; margin-top:8px;">
@@ -101,14 +103,14 @@
 
   </main>
 
-    <!-- FOOTER -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-main">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
-        <span class="logo-text">Thugra Academy</span>
-      </a>
+          <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+          <span class="logo-text">Thugra Academy</span>
+        </a>
         <p>Empowering the next generation of cybersecurity professionals.</p>
       </div>
       <div class="footer-col">
@@ -127,8 +129,9 @@
     </div>
     <div class="footer-bottom">2026 &copy; Thugra Academy. All rights reserved.</div>
   </footer>
-<button id="topBtn">↑</button>
-<div id="clock"></div>
-<script src="script.js"></script>
+  <button id="topBtn">↑</button>
+  <div id="clock"></div>
+  <script src="script.js"></script>
 </body>
+
 </html>

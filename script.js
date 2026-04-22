@@ -30,3 +30,118 @@ function updateClock() {
 }
 
 setInterval(updateClock, 1000);
+// =========================================================
+// Contact Us, About Us, Teachers Evaluation
+// =========================================================
+
+// 1. About Us
+const teachersList = document.getElementById('teachersList');
+const sortSelect = document.getElementById('sortTeachers');
+
+function setupAboutUs() {
+  if (!teachersList) return;
+
+
+  let cards = Array.from(teachersList.getElementsByClassName('teacher-card'));
+  cards.sort(() => Math.random() - 0.5);
+  cards.forEach(card => teachersList.appendChild(card));
+
+
+  if (sortSelect) {
+    sortSelect.addEventListener('change', function () {
+      let sortedCards = Array.from(teachersList.getElementsByClassName('teacher-card'));
+      const criteria = this.value;
+
+      sortedCards.sort((a, b) => {
+        if (criteria === 'name-asc') return a.dataset.name.localeCompare(b.dataset.name);
+        if (criteria === 'name-desc') return b.dataset.name.localeCompare(a.dataset.name);
+        if (criteria === 'exp-asc') return parseInt(a.dataset.exp) - parseInt(b.dataset.exp);
+        if (criteria === 'exp-desc') return parseInt(b.dataset.exp) - parseInt(a.dataset.exp);
+      });
+      sortedCards.forEach(card => teachersList.appendChild(card));
+    });
+  }
+}
+
+// 2. Contact Us 
+function setupContactUs() {
+  const contactForm = document.querySelector('.contact-form-box form');
+  if (!contactForm) return;
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const fullName = document.getElementById('fullName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+    if (!fullName || !email) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+
+    if (!isNaN(fullName[0])) {
+      alert("Name cannot start with numbers.");
+      return;
+    }
+    if (fullName.split(' ').length < 2) {
+      alert("Please enter FirstName and LastName.");
+      return;
+    }
+
+
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email!");
+      return;
+    }
+
+    alert(`Confirmation: Thank you ${fullName}, your message has been sent.`);
+    contactForm.reset();
+  });
+}
+
+//3. Teachers Evaluation
+function setupEvaluation() {
+  const evalForm = document.querySelector('.eval-box-body form');
+  if (!evalForm) return;
+
+  evalForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const teacher = document.getElementById('teacherSelect');
+    const rating = document.querySelector('input[name="rating"]:checked');
+    const feedback = document.getElementById('feedback');
+
+
+    [teacher, feedback].forEach(el => el.style.border = "");
+
+
+    if (!teacher.value || !rating || !feedback.value.trim()) {
+
+      if (!teacher.value) teacher.style.border = "2px solid red";
+      if (!feedback.value.trim()) feedback.style.border = "2px solid red";
+
+      alert("Missing fields: Please select a teacher, add a rating, and feedback.");
+      return;
+    }
+
+
+    if (parseInt(rating.value) >= 4) {
+      alert("Thank you for your good rating!");
+    } else {
+      alert("We apologize for not meeting your expectations.");
+    }
+
+
+    window.location.href = "dashboard.html";
+  });
+}
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  setupAboutUs();
+  setupContactUs();
+  setupEvaluation();
+});
