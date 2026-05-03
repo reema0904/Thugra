@@ -179,7 +179,10 @@ function calculateScore() {
       score++;
     }
   }
-
+  
+let total = Object.keys(correctAnswers).length;
+localStorage.setItem("totalQuestions", total);
+  
   localStorage.setItem("score", score);
   window.location.href = "result.html";
 
