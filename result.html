@@ -45,9 +45,9 @@
           <div class="progress-bar">
             <div class="progress-fill" style="width: 80%;"></div>
           </div>
-          <p style="color:var(--text-light); font-size:0.9rem; margin-bottom:8px;">80%</p>
+          <p id="percentText" style="color:var(--text-light); font-size:0.9rem; margin-bottom:8px;">0%</p>
 
-          <div class="result-status">Pass</div>
+          <div class="result-status" id="resultStatus">Pass</div>
 
           <div class="best-score">
             &#9733; Best Score: <span id="bestScore"></span>
@@ -95,30 +95,45 @@
   </footer>
 <button id="topBtn">↑</button>
 <div id="clock"></div>
-  <script>
+ <script>
 let score = localStorage.getItem("score");
-
-if (score === null) {
-  score = 0;
-}
-
 let total = localStorage.getItem("totalQuestions");
 
-if (!total) {
-  total = 5; // fallback
-}
+if (score === null) score = 0;
+if (total === null) total = 5;
 
+// نحولهم أرقام
+score = Number(score);
+total = Number(total);
+
+// نحسب النسبة
+let percentage = Math.round((score / total) * 100);
+
+// عرض الدرجة
 document.getElementById("scoreDisplay").innerText = score + " out of " + total;
 
-// 🔥 Best Score
+// البروجريس بار
+document.getElementById("progressFill").style.width = percentage + "%";
+
+// النسبة %
+document.getElementById("percentText").innerText = percentage + "%";
+
+// Pass / Fail
+if (percentage >= 60) {
+  document.getElementById("resultStatus").innerText = "Pass";
+} else {
+  document.getElementById("resultStatus").innerText = "Try Again";
+}
+
+// Best Score
 let best = localStorage.getItem("bestScore");
 
-if (best === null || score > best) {
+if (best === null || score > Number(best)) {
   best = score;
   localStorage.setItem("bestScore", best);
 }
 
-document.getElementById("bestScore").innerText = best + " / 5";
+document.getElementById("bestScore").innerText = best + " / " + total;
 </script>
 <script src="script.js"></script>
 </body>
