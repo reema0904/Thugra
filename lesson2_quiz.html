@@ -36,7 +36,10 @@
       <a href="lesson2_page2.html" class="back-to-courses">← Back to Lesson</a>
       <div class="quiz-box">
         <div class="quiz-box-header"><h2>Quiz: Lesson 2 – Malware Analysis & Defense</h2></div>
-        <form class="quiz-box-body" action="result.html" method="get">
+        
+        <form class="quiz-box-body" onsubmit="return calculateScore()">
+
+          
           <div class="quiz-question"><p>1. Which type of malware encrypts files and demands payment for decryption?</p>
             <label class="quiz-option"><input type="radio" name="q1" value="a"/>Virus</label>
             <label class="quiz-option"><input type="radio" name="q1" value="b"/>Ransomware</label>
@@ -99,6 +102,16 @@
   <div id="clock"></div>
 </footer>
 <button id="topBtn">↑</button>
+  
+ <script>
+const correctAnswers = {
+  q1: "b",
+  q2: "b",
+  q3: "c",
+  q4: "b"
+};
+</script>
+  
 <script src="script.js"></script>
 </body>
 </html>
