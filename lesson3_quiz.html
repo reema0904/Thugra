@@ -36,7 +36,8 @@
     <a href="lesson3_page2.html" class="back-to-courses">&#8592; Back to Lesson</a>
     <div class="quiz-box">
       <div class="quiz-box-header"><h2>Quiz: Lesson 3 - Cryptography Fundamentals</h2></div>
-      <form class="quiz-box-body" action="result.html" method="get">
+      
+        <form class="quiz-box-body" onsubmit="return calculateScore()">
         <div class="quiz-question"><p>1. What is the primary goal of Cryptography Fundamentals?</p>
           <label class="quiz-option"><input type="radio" name="q1" value="a"/> To create new vulnerabilities</label>
           <label class="quiz-option"><input type="radio" name="q1" value="b"/> To protect systems and data from unauthorized access</label>
@@ -98,6 +99,16 @@
       <div id="clock"></div>
 </footer>
 <button id="topBtn">↑</button>
+
+<script>
+const correctAnswers = {
+  q1: "b",
+  q2: "c",
+  q3: "b",
+  q4: "b"
+};
+</script>
+  
 <script src="script.js"></script>
 </body>
 </html>
