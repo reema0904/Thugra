@@ -162,3 +162,52 @@ if (moreBtn) {
   };
 }
 
+
+// حسابات الريزولت بيج
+
+function calculateScore() {
+  let score = 0;
+
+  let q1 = document.querySelector('input[name="q1"]:checked');
+  if (!q1) {
+    alert("Please answer all questions!");
+    return false;
+  }
+  if (q1.value === "b") score++;
+
+  let q2 = document.querySelector('input[name="q2"]:checked');
+  if (!q2) {
+    alert("Please answer all questions!");
+    return false;
+  }
+  if (q2.value === "c") score++;
+
+  let q3 = document.querySelector('input[name="q3"]:checked');
+  if (!q3) {
+    alert("Please answer all questions!");
+    return false;
+  }
+  if (q3.value === "b") score++;
+
+  let q4 = document.querySelector('input[name="q4"]:checked');
+  if (!q4) {
+    alert("Please answer all questions!");
+    return false;
+  }
+  if (q4.value === "c") score++;
+
+  let q5 = document.querySelector('input[name="q5"]:checked');
+  if (!q5) {
+    alert("Please answer all questions!");
+    return false;
+  }
+  if (q5.value === "b") score++;
+
+  localStorage.setItem("score", score);
+
+  window.location.href = "result.html";
+
+  return false;
+}
+
+
