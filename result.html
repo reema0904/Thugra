@@ -50,7 +50,7 @@
           <div class="result-status">Pass</div>
 
           <div class="best-score">
-            &#9733; Best Score: 4/5 (80%)
+            &#9733; Best Score: <span id="bestScore"></span>
           </div>
 
           <p style="font-size:0.9rem; color:var(--text-light); margin-top:8px;">
@@ -101,7 +101,18 @@ let score = localStorage.getItem("score");
 if (score === null) {
   score = 0;
 }
+
 document.getElementById("scoreDisplay").innerText = score + " out of 5";
+
+// 🔥 Best Score
+let best = localStorage.getItem("bestScore");
+
+if (best === null || score > best) {
+  best = score;
+  localStorage.setItem("bestScore", best);
+}
+
+document.getElementById("bestScore").innerText = best + " / 5";
 </script>
 <script src="script.js"></script>
 </body>
