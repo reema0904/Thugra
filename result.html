@@ -40,7 +40,7 @@
         </div>
 
         <div class="result-body">
-          <div class="score-display">4 out of 5</div>
+        <div class="score-display" id="scoreDisplay">0 out of 5</div>
 
           <div class="progress-bar">
             <div class="progress-fill" style="width: 80%;"></div>
@@ -95,6 +95,14 @@
   </footer>
 <button id="topBtn">↑</button>
 <div id="clock"></div>
+  <script>
+let score = localStorage.getItem("score");
+
+if (score === null) {
+  score = 0;
+}
+document.getElementById("scoreDisplay").innerText = score + " out of 5";
+</script>
 <script src="script.js"></script>
 </body>
 </html>
