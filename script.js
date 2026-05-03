@@ -145,3 +145,20 @@ window.addEventListener('DOMContentLoaded', () => {
   setupContactUs();
   setupEvaluation();
 });
+
+
+// ===== More Lessons Button =====
+const moreBtn = document.getElementById("moreBtn");
+
+if (moreBtn) {
+  moreBtn.onclick = function () {
+    const extraLessons = document.querySelectorAll(".extra-lesson");
+
+    for (let i = 0; i < extraLessons.length; i++) {
+      extraLessons[i].style.display = "block";
+    }
+
+    moreBtn.style.display = "none";
+  };
+}
+
