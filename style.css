@@ -1329,3 +1329,21 @@ footer {
   top: 10px;
   right: 20px;
 }
+
+
+/* more */
+.more-btn {
+  background-color: #2b6cb0;
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.more-btn:hover {
+  background-color: #1e4e8c;
+}
