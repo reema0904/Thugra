@@ -102,7 +102,13 @@ if (score === null) {
   score = 0;
 }
 
-document.getElementById("scoreDisplay").innerText = score + " out of 5";
+let total = localStorage.getItem("totalQuestions");
+
+if (!total) {
+  total = 5; // fallback
+}
+
+document.getElementById("scoreDisplay").innerText = score + " out of " + total;
 
 // 🔥 Best Score
 let best = localStorage.getItem("bestScore");
