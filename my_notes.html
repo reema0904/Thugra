@@ -7,7 +7,7 @@
 </head>
 <body>
 
- <!-- HEADER -->
+  <!-- HEADER -->
   <header>
     <nav class="navbar">
       <a href="index.html" class="logo">
@@ -29,7 +29,8 @@
     <div class="breadcrumb-inner">
       <a href="index.html">Home</a><span>&gt;</span>
       <a href="dashboard.html">Student Dashboard</a>
-      <span>&gt;</span>My Notes</div>
+      <span>&gt;</span>My Notes
+    </div>
   </div>
 
   <main>
@@ -48,92 +49,48 @@
     <!-- SECTION 1: Add New Note -->
     <div class="notes-section">
       <h3>&#43; Add New Note</h3>
-      <form action="#" method="post" class="add-note-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="noteText">Note Text</label>
-            <input type="text" id="noteText" name="noteText" class="form-control" placeholder="Enter your note..." required />
-          </div>
-          <div class="form-group" style="flex: 0 1 180px;">
-            <label for="notePriority">Priority</label>
-            <select id="notePriority" name="notePriority" class="form-control">
-              <option value="">Select priority</option>
-              <option value="1">1 - High Priority</option>
-              <option value="2">2 - Medium Priority</option>
-              <option value="3">3 - Low Priority</option>
-            </select>
-          </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="noteText">Note Text</label>
+          <input type="text" id="noteText" class="form-control" placeholder="Enter your note..." />
         </div>
-        <div style="display:flex; gap:10px; margin-top:12px;">
-          <button type="submit" name="action" value="add" class="btn btn-blue">Add</button>
-          <button type="button" class="btn btn-success">Save</button>
+        <div class="form-group" style="flex: 0 1 180px;">
+          <label for="notePriority">Priority</label>
+          <select id="notePriority" class="form-control">
+            <option value="">Select priority</option>
+            <option value="1">1 - High Priority</option>
+            <option value="2">2 - Medium Priority</option>
+            <option value="3">3 - Low Priority</option>
+          </select>
         </div>
-      </form>
+      </div>
+      <div style="display:flex; gap:10px; margin-top:12px;">
+        <button type="button" class="btn btn-blue" onclick="addNote()">Add</button>
+        <button type="button" class="btn btn-success" onclick="saveNote()">Save</button>
+      </div>
     </div>
 
-    <!-- SECTION 2: Saved Notes (Delete Form) -->
+    <!-- SECTION 2: Saved Notes -->
     <div class="notes-section">
       <h3>&#128221; Saved Notes</h3>
-      <form action="#" method="post">
-
-        <div class="note-item">
-          <input type="checkbox" name="deleteNote" value="1" id="note1"/>
-          <img src="images/note_icon.png" alt="Note" class="note-thumb" />
-          <div class="note-info">
-            <div class="note-text">Review the OSI model layers and their security implications</div>
-            <div class="note-date">March 5, 2026</div>
-            <div class="note-priority">Priority: 1 (High)</div>
-          </div>
-        </div>
-
-        <div class="note-item">
-          <input type="checkbox" name="deleteNote" value="2" id="note2"/>
-          <img src="images/note_icon.png" alt="Note" class="note-thumb" />
-          <div class="note-info">
-            <div class="note-text">Study the differences between symmetric and asymmetric encryption</div>
-            <div class="note-date">March 4, 2026</div>
-            <div class="note-priority">Priority: 2 (Medium)</div>
-          </div>
-        </div>
-
-        <div class="note-item">
-          <input type="checkbox" name="deleteNote" value="3" id="note3"/>
-          <img src="images/note_icon.png" alt="Note" class="note-thumb" />
-          <div class="note-info">
-            <div class="note-text">Memorize the OWASP Top 10 vulnerabilities for the next quiz</div>
-            <div class="note-date">March 2, 2026</div>
-            <div class="note-priority">Priority: 1 (High)</div>
-          </div>
-        </div>
-
-        <div class="note-item">
-          <input type="checkbox" name="deleteNote" value="4" id="note4"/>
-          <img src="images/note_icon.png" alt="Note" class="note-thumb" />
-          <div class="note-info">
-            <div class="note-text">Read more about incident response frameworks (NIST, SANS)</div>
-            <div class="note-date">February 28, 2026</div>
-            <div class="note-priority">Priority: 3 (Low)</div>
-          </div>
-        </div>
-
-        <div style="margin-top:16px;">
-          <button type="submit" name="action" value="delete" class="btn btn-danger">Delete Selected</button>
-        </div>
-
-      </form>
+      <div id="notesList">
+        <!-- Notes will be loaded by JavaScript -->
+      </div>
+      <div style="margin-top:16px;">
+        <button type="button" class="btn btn-danger" onclick="deleteSelected()">Delete Selected</button>
+      </div>
     </div>
 
   </main>
 
- 
-<!-- FOOTER -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-main">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
-        <span class="logo-text">Thugra Academy</span>
-      </a>
+          <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+          <span class="logo-text">Thugra Academy</span>
+        </a>
         <p>Empowering the next generation of cybersecurity professionals.</p>
       </div>
       <div class="footer-col">
@@ -153,8 +110,9 @@
     <div class="footer-bottom">2026 &copy; Thugra Academy. All rights reserved.</div>
     <div id="clock"></div>
   </footer>
-<button id="topBtn">↑</button>
 
-<script src="script.js"></script>
+  <button id="topBtn">↑</button>
+  <script src="script.js"></script>
+
 </body>
 </html>
