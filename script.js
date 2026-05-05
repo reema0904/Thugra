@@ -188,4 +188,64 @@ localStorage.setItem("totalQuestions", total);
 
   return false;
 }
+// ===== Dashboard =====
+var lessons = [
+    { key: "lesson1_score", name: "Lesson 1: Network Security",         teacher: "Dr. Sarah Al-Rashid" },
+    { key: "lesson2_score", name: "Lesson 2: Malware Analysis",         teacher: "Prof. Khalid Al-Otaibi" },
+    { key: "lesson3_score", name: "Lesson 3: Cryptography",             teacher: "Dr. Reem Al-Harbi" },
+    { key: "lesson4_score", name: "Lesson 4: Web Application Security", teacher: "Eng. Nada Al-Qahtani" },
+    { key: "lesson5_score", name: "Lesson 5: Ethical Hacking",          teacher: "Dr. Faisal Al-Dossari" },
+    { key: "lesson6_score", name: "Lesson 6: Digital Forensics",        teacher: "Prof. Hanan Al-Shehri" }
+];
 
+function loadScores() {
+    var tbody = document.getElementById("scoresBody");
+    var section = document.getElementById("scoresSection");
+
+    // If not on dashboard page, stop
+    if (!tbody || !section) return;
+
+    var hasScores = false;
+
+    // Loop through each lesson and check localStorage
+    for (var i = 0; i < lessons.length; i++) {
+        var score = localStorage.getItem(lessons[i].key);
+
+        // Only add a row if a score exists
+        if (score != null) {
+            hasScores = true;
+
+            // Create a new table row
+            var row = document.createElement("tr");
+
+            // Determine pass or fail
+            var scoreNum = Number.parseInt(score);
+            var status = "";
+            var statusClass = "";
+
+            if (scoreNum >= 60) {
+                status = "✓ Pass";
+                statusClass = "score-pass";
+            } else {
+                status = "✗ Fail";
+                statusClass = "score-fail";
+            }
+
+            // Fill the row with data
+            row.innerHTML = "<td>" + lessons[i].name + "</td>" +
+                            "<td>" + lessons[i].teacher + "</td>" +
+                            "<td class='" + statusClass + "'>" + score + "%</td>" +
+                            "<td class='" + statusClass + "'>" + status + "</td>";
+
+            // Add row to table
+            tbody.appendChild(row);
+        }
+    }
+
+    // Hide the table section if no scores found
+    if (hasScores == false) {
+        section.style.display = "none";
+    }
+}
+
+loadScores();
