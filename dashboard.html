@@ -7,7 +7,7 @@
 </head>
 <body>
 
- <!-- HEADER -->
+  <!-- HEADER -->
   <header>
     <nav class="navbar">
       <a href="index.html" class="logo">
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <!-- Quick Links (Flexbox) -->
+    <!-- Quick Links -->
     <div class="dashboard-links">
       <a href="my_notes.html" class="dashboard-link-card">
         <div class="icon">&#128221;</div>
@@ -53,8 +53,8 @@
       </a>
     </div>
 
-    <!-- Quiz Scores Table (New Requirement) -->
-    <div class="scores-table-wrap">
+    <!-- Quiz Scores Table -->
+    <div class="scores-table-wrap" id="scoresSection">
       <h3>&#128200; My Quiz Scores</h3>
       <table class="scores-table">
         <thead>
@@ -65,43 +65,8 @@
             <th>Status</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Lesson 1: Network Security</td>
-            <td>Dr. Sarah Al-Rashid</td>
-            <td class="score-pass">4/5 (80%)</td>
-            <td class="score-pass">&#10003; Pass</td>
-          </tr>
-          <tr>
-            <td>Lesson 2: Malware Analysis</td>
-            <td>Prof. Khalid Al-Otaibi</td>
-            <td class="score-pass">3/4 (75%)</td>
-            <td class="score-pass">&#10003; Pass</td>
-          </tr>
-          <tr>
-            <td>Lesson 3: Cryptography Fundamentals</td>
-            <td>Dr. Reem Al-Harbi</td>
-            <td class="score-none">None</td>
-            <td class="score-none">Not Attempted</td>
-          </tr>
-          <tr>
-            <td>Lesson 4: Web Application Security</td>
-            <td>Eng. Nada Al-Qahtani</td>
-            <td class="score-none">None</td>
-            <td class="score-none">Not Attempted</td>
-          </tr>
-          <tr>
-            <td>Lesson 5: Ethical Hacking</td>
-            <td>Dr. Faisal Al-Dossari</td>
-            <td class="score-none">None</td>
-            <td class="score-none">Not Attempted</td>
-          </tr>
-          <tr>
-            <td>Lesson 6: Digital Forensics</td>
-            <td>Prof. Hanan Al-Shehri</td>
-            <td class="score-none">None</td>
-            <td class="score-none">Not Attempted</td>
-          </tr>
+        <tbody id="scoresBody">
+          <!-- يتم ملؤه بالـ JavaScript -->
         </tbody>
       </table>
     </div>
@@ -113,9 +78,9 @@
     <div class="footer-main">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
-        <span class="logo-text">Thugra Academy</span>
-      </a>
+          <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+          <span class="logo-text">Thugra Academy</span>
+        </a>
         <p>Empowering the next generation of cybersecurity professionals.</p>
       </div>
       <div class="footer-col">
@@ -135,7 +100,10 @@
     <div class="footer-bottom">2026 &copy; Thugra Academy. All rights reserved.</div>
     <div id="clock"></div>
   </footer>
-<button id="topBtn">↑</button>
-<script src="script.js"></script>
+
+  <button id="topBtn">↑</button>
+  <script src="script.js"></script>
+  <script src="dashboard.js"></script>
+
 </body>
 </html>
