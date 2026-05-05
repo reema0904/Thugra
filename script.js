@@ -249,3 +249,167 @@ function loadScores() {
 }
 
 loadScores();
+
+// ===== My Notes =====
+
+// Load notes array from localStorage
+function getNotes() {
+    var data = localStorage.getItem("notes");
+    if (data != null) {
+        return JSON.parse(data);
+    }
+    return [];
+}
+
+// Save notes array to localStorage
+function saveNotes(notes) {
+    localStorage.setItem("notes", JSON.stringify(notes));
+}
+
+// Display all notes on the page
+function displayNotes() {
+    var notesList = document.getElementById("notesList");
+    if (!notesList) return;
+
+    // Clear current list
+    notesList.innerHTML = "";
+
+    var notes = getNotes();
+
+    // Loop through notes and create HTML for each
+    for (var i = 0; i < notes.length; i++) {
+        var note = notes[i];
+
+        // Set background color based on priority
+        var bgColor = "";
+        if (note.priority == "1") {
+            bgColor = "#ffcccc"; // Red - High
+        } else if (note.priority == "2") {
+            bgColor = "#fff5cc"; // Yellow - Medium
+        } else if (note.priority == "3") {
+            bgColor = "#ccffcc"; // Green - Low
+        }
+
+        // Priority label
+        var priorityLabel = "";
+        if (note.priority == "1") priorityLabel = "1 (High)";
+        if (note.priority == "2") priorityLabel = "2 (Medium)";
+        if (note.priority == "3") priorityLabel = "3 (Low)";
+
+        // Create note item div
+        var div = document.createElement("div");
+        div.className = "note-item";
+        div.style.backgroundColor = bgColor;
+
+        div.innerHTML = "<input type='checkbox' name='deleteNote' value='" + i + "' />" +
+                        "<img src='images/note_icon.png' alt='Note' class='note-thumb' />" +
+                        "<div class='note-info'>" +
+                            "<div class='note-text'>" + note.text + "</div>" +
+                            "<div class='note-date'>" + note.date + "</div>" +
+                            "<div class='note-priority'>Priority: " + priorityLabel + "</div>" +
+                        "</div>";
+
+        notesList.appendChild(div);
+    }
+}
+
+// Validate and add note to the page only (not saved to localStorage)
+function addNote() {
+    var text = document.getElementById("noteText").value.trim();
+    var priority = document.getElementById("notePriority").value;
+
+    // Check if note text is empty or less than 30 characters
+    if (text.length < 30) {
+        alert("Note description must be at least 30 characters.");
+        return;
+    }
+
+    // Check if priority is selected
+    if (priority == "") {
+        alert("Please select a priority.");
+        return;
+    }
+
+    // Get current notes and add new one (not saved to localStorage)
+    var notes = getNotes();
+    var today = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+    notes.push({ text: text, priority: priority, date: today });
+
+    // Display updated list without saving
+    saveNotes(notes);
+    displayNotes();
+
+    // Clear the form
+    document.getElementById("noteText").value = "";
+    document.getElementById("notePriority").value = "";
+}
+
+// Validate, save note to localStorage, and clear form
+function saveNote() {
+    var text = document.getElementById("noteText").value.trim();
+    var priority = document.getElementById("notePriority").value;
+
+    // Check if note text is empty or less than 30 characters
+    if (text.length < 30) {
+        alert("Note description must be at least 30 characters.");
+        return;
+    }
+
+    // Check if priority is selected
+    if (priority == "") {
+        alert("Please select a priority.");
+        return;
+    }
+
+    // Get current notes and add new one
+    var notes = getNotes();
+    var today = new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+    notes.push({ text: text, priority: priority, date: today });
+
+    // Save to localStorage
+    saveNotes(notes);
+
+    // Refresh the displayed list
+    displayNotes();
+
+    // Clear the form
+    document.getElementById("noteText").value = "";
+    document.getElementById("notePriority").value = "";
+}
+
+// Delete selected notes
+function deleteSelected() {
+    var checkboxes = document.querySelectorAll("input[name='deleteNote']:checked");
+
+    // Alert if no note is selected
+    if (checkboxes.length == 0) {
+        alert("Please select at least one note.");
+        return;
+    }
+
+    // Ask for confirmation before deleting
+    var confirmed = confirm("Are you sure you want to delete the selected notes?");
+    if (!confirmed) return;
+
+    // Collect indexes to delete
+    var notes = getNotes();
+    var toDelete = [];
+    for (var i = 0; i < checkboxes.length; i++) {
+        toDelete.push(Number.parseInt(checkboxes[i].value));
+    }
+
+    // Build new array without deleted notes
+    var newNotes = [];
+    for (var i = 0; i < notes.length; i++) {
+        if (toDelete.indexOf(i) == -1) {
+            newNotes.push(notes[i]);
+        }
+    }
+
+    // Save updated notes and refresh display
+    saveNotes(newNotes);
+    displayNotes();
+}
+
+// Load notes when page opens
+displayNotes();
