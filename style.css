@@ -1377,15 +1377,42 @@ footer {
 .more-btn:hover {
   background-color: #1e4e8c;
 }
+
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 16px;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
     }
 
     .nav-links {
+        width: 100%;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 4px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+
+    #themeBtn {
+        width: 100%;
+        text-align: center;
+        margin-top: 4px;
+    }
+
+    #clock {
+        font-size: 0.7rem;
+        right: 8px;
+        top: 8px;
     }
 
     .hero {
@@ -1428,15 +1455,6 @@ footer {
     .lesson-table {
         display: block;
         overflow-x: auto;
-    }
-
-    #themeBtn {
-        margin-top: 6px;
-    }
-
-    #clock {
-        font-size: 0.75rem;
-        right: 10px;
     }
 
     main {
