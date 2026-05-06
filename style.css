@@ -1326,6 +1326,18 @@ footer {
     background-color: #2a2a2a;
     color: white;
 }
+.dark .lesson-card {
+    background-color: #1a1a1a;
+    border-color: #333;
+}
+
+.dark .lesson-title {
+    color: #ffffff;
+}
+
+.dark .lesson-teacher {
+    color: #cccccc;
+}
 /* Back to top */
 #topBtn {
   position: fixed;
