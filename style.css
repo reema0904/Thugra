@@ -1325,9 +1325,14 @@ footer {
 
 /* Clock */
 #clock {
-  position: fixed;
-  top: 10px;
-  right: 20px;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background-color: #0057B8;
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
 }
 
 
