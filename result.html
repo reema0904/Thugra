@@ -7,7 +7,7 @@
 </head>
 <body>
 
- <!-- HEADER -->
+  <!-- HEADER -->
   <header>
     <nav class="navbar">
       <a href="index.html" class="logo">
@@ -28,24 +28,25 @@
   <div class="breadcrumb">
     <div class="breadcrumb-inner">
       <a href="index.html">Home</a><span>&gt;</span>
-      <a href="courses.html">Course Content</a><span>&gt;</span>Quiz Result</div>
+      <a href="courses.html">Course Content</a><span>&gt;</span>Quiz Result
+    </div>
   </div>
 
   <main>
     <div class="result-wrapper">
-
       <div class="result-box">
         <div class="result-header">
           <h2>&#10003; Great Job!</h2>
         </div>
 
         <div class="result-body">
-        <div class="score-display" id="scoreDisplay">0 out of 5</div>
+          <div class="score-display" id="scoreDisplay">0 out of 5</div>
 
           <div class="progress-bar">
             <div class="progress-fill" id="progressFill"></div>
           </div>
-          <p id="percentText" style="color:var(--text-light); font-size:0.9rem; margin-bottom:8px;">0%</p>
+
+          <p id="percentText" style="font-size:0.9rem; margin-bottom:8px;">0%</p>
 
           <div class="result-status" id="resultStatus">Pass</div>
 
@@ -53,28 +54,27 @@
             &#9733; Best Score: <span id="bestScore"></span>
           </div>
 
-          <p style="font-size:0.9rem; color:var(--text-light); margin-top:8px;">
+          <p style="font-size:0.9rem; margin-top:8px;">
             Keep practicing to improve your score and deepen your understanding of cybersecurity concepts.
           </p>
 
           <div class="result-btns">
             <a href="courses.html" class="btn btn-blue">Back to Course Content</a>
-            <a href="javascript:history.back()" class="btn btn-outline" style="color:var(--primary);border-color:var(--primary);">Retake Quiz</a>
+            <a href="javascript:history.back()" class="btn btn-outline" style="color:#0057B8; border-color:#0057B8;">Retake Quiz</a>
           </div>
         </div>
       </div>
-
     </div>
   </main>
 
-    <!-- FOOTER -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-main">
       <div class="footer-brand">
         <a href="index.html" class="logo">
-        <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
-        <span class="logo-text">Thugra Academy</span>
-      </a>
+          <img src="images/Thugralogo.png" alt="Thugra Academy Logo" />
+          <span class="logo-text">Thugra Academy</span>
+        </a>
         <p>Empowering the next generation of cybersecurity professionals.</p>
       </div>
       <div class="footer-col">
@@ -92,49 +92,57 @@
       </div>
     </div>
     <div class="footer-bottom">2026 &copy; Thugra Academy. All rights reserved.</div>
+    <div id="clock"></div>
   </footer>
-<button id="topBtn">↑</button>
-<div id="clock"></div>
- <script>
-let score = localStorage.getItem("score");
-let total = localStorage.getItem("totalQuestions");
 
-if (score === null) score = 0;
-if (total === null) total = 5;
+  <button id="topBtn">↑</button>
 
-// نحولهم أرقام
-score = Number(score);
-total = Number(total);
+  <script>
+    // Get score and total from localStorage
+    var score = localStorage.getItem("score");
+    var total = localStorage.getItem("totalQuestions");
 
-// نحسب النسبة
-let percentage = Math.round((score / total) * 100);
+    if (score === null) score = 0;
+    if (total === null) total = 5;
 
-// عرض الدرجة
-document.getElementById("scoreDisplay").innerText = score + " out of " + total;
+    score = Number(score);
+    total = Number(total);
 
-// البروجريس بار
-document.getElementById("progressFill").style.width = percentage + "%";
+    // Calculate percentage
+    var percentage = Math.round((score / total) * 100);
 
-// النسبة %
-document.getElementById("percentText").innerText = percentage + "%";
+    // Show score
+    document.getElementById("scoreDisplay").innerText = score + " out of " + total;
 
-// Pass / Fail
-if (percentage >= 60) {
-  document.getElementById("resultStatus").innerText = "Pass";
-} else {
-  document.getElementById("resultStatus").innerText = "Try Again";
-}
+    // Progress bar
+    document.getElementById("progressFill").style.width = percentage + "%";
 
-// Best Score
-let best = localStorage.getItem("bestScore");
+    // Percentage text
+    document.getElementById("percentText").innerText = percentage + "%";
 
-if (best === null || score > Number(best)) {
-  best = score;
-  localStorage.setItem("bestScore", best);
-}
+    // Pass or Fail
+    if (percentage >= 60) {
+        document.getElementById("resultStatus").innerText = "Pass";
+    } else {
+        document.getElementById("resultStatus").innerText = "Try Again";
+    }
 
-document.getElementById("bestScore").innerText = best + " / " + total;
-</script>
-<script src="script.js"></script>
+    // Best Score - read from lesson key
+    var page = localStorage.getItem("lastQuiz");
+    var lessonKey = "lesson1_score";
+
+    if (page && page.indexOf("lesson2") !== -1) lessonKey = "lesson2_score";
+    if (page && page.indexOf("lesson3") !== -1) lessonKey = "lesson3_score";
+    if (page && page.indexOf("lesson4") !== -1) lessonKey = "lesson4_score";
+    if (page && page.indexOf("lesson5") !== -1) lessonKey = "lesson5_score";
+    if (page && page.indexOf("lesson6") !== -1) lessonKey = "lesson6_score";
+
+    var best = localStorage.getItem(lessonKey);
+    if (best === null) best = percentage;
+    document.getElementById("bestScore").innerText = best + "%";
+  </script>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
