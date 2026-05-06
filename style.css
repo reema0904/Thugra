@@ -1382,40 +1382,63 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .hero {
         flex-direction: column;
         padding: 32px 24px;
         text-align: center;
     }
+
     .hero-img img {
         width: 100%;
         height: auto;
     }
+
     .hero-btns {
         justify-content: center;
     }
+
     .lessons-flex,
     .courses-flex,
     .reviews-flex {
         flex-direction: column;
         align-items: center;
     }
+
     .lesson-card,
     .course-card,
     .review-card {
         max-width: 100%;
         width: 100%;
     }
+
     .contact-grid {
         flex-direction: column;
     }
+
     .dashboard-links {
         flex-direction: column;
     }
+
+    .lesson-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    #themeBtn {
+        margin-top: 6px;
+    }
+
+    #clock {
+        font-size: 0.75rem;
+        right: 10px;
+    }
+
     main {
         padding: 20px 16px;
     }
