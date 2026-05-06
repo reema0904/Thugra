@@ -1290,7 +1290,7 @@ footer {
   color: #aaaaaa;
 }
 
-/* الجداول */
+/* Tables */
 .dark .scores-table,
 .dark .lesson-table {
   background-color: #1a1a1a;
@@ -1312,7 +1312,20 @@ footer {
 .dark .score-none {
   color: #bbbbbb;
 }
+.dark .best-score {
+    background-color: #2a2a2a;
+    border-color: #F5A623;
+    color: #ffffff;
+}
 
+.dark .course-card-body h3 a {
+    color: #ffffff;
+}
+
+.dark .lesson-table tr:nth-child(even) td {
+    background-color: #2a2a2a;
+    color: white;
+}
 /* Back to top */
 #topBtn {
   position: fixed;
