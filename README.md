@@ -4,8 +4,7 @@
 
 ##### Thugra Academy is a cybersecurity e-learning platform built with HTML, CSS, and JavaScript. ##### It offers interactive lessons, quizzes, a student dashboard, notes management, teacher evaluation, and supports light & dark mode with responsive design.
 
-##### Team Members:
-
+#### Team Members:
 ##### Nourah Almifqaee
 ##### Reema Almjaideea
 ##### Fatima Abdullah
